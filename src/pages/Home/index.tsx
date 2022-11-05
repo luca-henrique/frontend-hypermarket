@@ -27,7 +27,7 @@ const Home = () => {
           {
             eventName: 'complete',
             callback: () => {
-              if (isMobile) history.push('/entrar')
+              if (isMobile) history.push('/produtos')
             },
           },
         ]}

@@ -59,14 +59,18 @@ const CategoriesContainerSwiper = () => {
 
   return (
     <div>
-      <h4 style={{ marginTop: '22px', marginBottom: '12px' }}>Categorias</h4>
+      <h4 style={{ marginBottom: '12px' }}>Promoções</h4>
       <Container>
-        {categories.map(item => {
+        {[1].map(item => {
           return (
-            <CategoryItem
-              item={item}
-              onClick={() => selectecCategory(item.id)}
-            />
+            <div
+              style={{
+                width: '100%',
+                height: '168px',
+                borderRadius: '12px',
+                background: '#6ECB9E',
+              }}
+            ></div>
           )
         })}
       </Container>

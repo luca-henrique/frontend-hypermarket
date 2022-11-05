@@ -16,10 +16,10 @@ export const Container = styled.div`
 `
 
 export const Button = styled.button`
-  background-color: #ff2351;
+  background-color: #fdaa5d;
   border: none;
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
   padding: 8px;
   border-radius: 50%;
   display: flex;
@@ -31,8 +31,8 @@ export const Button = styled.button`
 
 export const Badge = styled.div`
   background-color: #ffffff;
-  border: 1px solid #aa2351;
-  color: #aa2351;
+  border: 1px solid #fdaa5d;
+  color: #fdaa5d;
   padding: 4px;
   height: 18px;
   min-width: 18px;

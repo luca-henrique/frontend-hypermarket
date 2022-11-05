@@ -1,7 +1,6 @@
 .products {
-  width: 70%;
+  width: 100%;
   padding: 48px 85px 0px 85px;
-  margin-left: 129px;
 }
 
 .title {
@@ -12,11 +11,12 @@
 
 .areaProducts {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-@media (max-width: 480px){
-
+@media (max-width: 480px) {
   .products {
     padding: 0px;
     margin-left: 0;
@@ -25,12 +25,13 @@
   .title {
     margin-bottom: 0;
     margin-top: 32px;
-    margin-left: 16px;
   }
 
   .areaProducts {
-    width: 100vw;
-    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-
 }

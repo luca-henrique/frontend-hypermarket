@@ -1,53 +1,19 @@
 .card {
-  background-color: #fff;
-  padding: 24px;
   display: flex;
   flex-direction: column;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 100%;
+  align-items: center;
+  width: 155px;
+  border: 1px solid #e8eff3;
+  border-radius: 12px;
+
+  padding: 12px;
+
+  margin: 10px 0px;
 }
 
 .card img {
-  margin-top: 24px;
-  align-self: center;
-}
-
-.title {
-  font-weight: 600;
-  margin-top: 14px;
-}
-
-.description {
-  color: #848484;
-  font-weight: 300;
-  max-width: 174px;
-  font-size: 12px;
-  margin-top: 8px;
-}
-
-.price {
-  font-weight: 600;
-  font-size: 18px;
-  margin-top: 8px;
-  color: #fdc844;
-}
-
-.offer {
-  top: 8px;
-  right: 12px;
-  position: absolute;
-  align-self: flex-end;
-  margin-bottom: 12px;
-  background-color: #ff2351;
-  color: #fff;
-  padding: 2px 8px;
-  border-radius: 8px;
-}
-
-.offer p {
-  font-size: 12px;
-  font-weight: 500;
+  width: 80px;
+  height: 70px;
 }
 
 .disable:after {
@@ -73,22 +39,5 @@
   to {
     opacity: 1;
     transform: initial;
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    flex-direction: row;
-    border-radius: 8px;
-    max-width: 90vw;
-    margin: 6px 0px;
-    border: 1px solid #dadada;
-  }
-
-  .card img {
-    margin-top: 42px;
-    margin-right: 16px;
-    align-self: flex-start;
-    max-width: 86px;
   }
 }
