@@ -2,34 +2,7 @@ import { useDispatch } from 'react-redux'
 import styles from './ProductItem.module.css'
 import { changerProductSelected } from 'src/store/action/product.action'
 
-import styled from 'styled-components'
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-`
-
-export const Button = styled.button`
-  border: 1px solid #fdaa5d;
-  border-radius: 12px;
-  color: #fdaa5d;
-  height: 36px;
-  background: #fff;
-  width: 100%;
-  margin-top: 4px;
-`
-
-const Title = styled.span`
-  font-size: 14px;
-  margin-top: 8px;
-  text-align: center;
-`
-
-const Price = styled.p`
-  font-size: 14px;
-  text-align: center;
-`
+import { Container, Price, Title, Button } from './style'
 
 const ProductItem = ({ inputCart, item }) => {
   const dispatch = useDispatch()
@@ -38,6 +11,7 @@ const ProductItem = ({ inputCart, item }) => {
     item.isSelected && styles.disable
   }`
 
+  //Criar hook
   const addItemCart = () => {
     if (!item.isSelected) {
       inputCart(item)
