@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import ProductItem from 'src/components/atomic/ProductItem/ProductItem'
+import {Product} from 'src/components/atomic/'
 
 import { getProductRequest } from 'src/store/action/product.action'
 import { addItemCart } from 'src/store/action/cart.action'
@@ -39,7 +39,7 @@ const Products = () => {
           ) : (
             <>
               {data.map(product => (
-                <ProductItem
+                <Product
                   inputCart={handleClick}
                   key={product.id}
                   item={product}

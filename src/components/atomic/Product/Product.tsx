@@ -1,23 +1,16 @@
-import { useDispatch } from 'react-redux'
-import styles from './ProductItem.module.css'
-import { changerProductSelected } from 'src/store/action/product.action'
+import styles from './style.css'
 
 import { Container, Price, Title, Button } from './style'
+import { useProduct } from 'src/hook/useProduct'
 
-const ProductItem = ({ inputCart, item }) => {
-  const dispatch = useDispatch()
+export const Product = ({ inputCart, item }:any) => {
+
+  const {addProductCart} = useProduct()
 
   const styleContainer = `${styles.card} ${styles.enterLeft} ${
     item.isSelected && styles.disable
   }`
 
-  //Criar hook
-  const addItemCart = () => {
-    if (!item.isSelected) {
-      inputCart(item)
-      dispatch(changerProductSelected(item.id))
-    }
-  }
 
   return (
     <div className={styleContainer} key={item.id}>
@@ -30,10 +23,9 @@ const ProductItem = ({ inputCart, item }) => {
             currency: 'BRL',
           })}
         </Price>
-        <Button onClick={addItemCart}>Adicionar</Button>
+        <Button onClick={() => addProductCart(item,inputCart)}>Adicionar</Button>
       </Container>
     </div>
   )
 }
 
-export default ProductItem
