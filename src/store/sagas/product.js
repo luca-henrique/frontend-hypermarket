@@ -4,7 +4,9 @@ import { getProductSuccess } from '../action/product.action'
 export function* getProducts({ payload }) {
   try {
     const json = yield call(() =>
-      fetch(`https://my-json-server.typicode.com/danielmafra/api/${payload}`)
+      fetch(
+        `https://my-json-server.typicode.com/web-intelligence-arcoverde/api-hypermarket-fake/${payload}`,
+      )
         .then(response => response.json())
         .then(myJson => myJson),
     )
@@ -12,6 +14,7 @@ export function* getProducts({ payload }) {
     const data = json.map(item => {
       const newItem = {
         ...item,
+        example: 'Cerveja Corona Extra Pilsen 330ml Long Neck 1 Garrafa',
         isSelected: false,
       }
       return newItem

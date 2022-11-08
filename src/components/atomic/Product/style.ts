@@ -20,6 +20,7 @@ export const Title = styled.span`
   font-size: 14px;
   margin-top: 8px;
   text-align: center;
+  margin-bottom: 6px;
 `
 
 export const Price = styled.p`
